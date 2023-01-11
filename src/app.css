@@ -79,3 +79,12 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 }
+
+input[type=number] {
+    border: 0;
+    border-bottom: 1px solid #fff;
+    background: #ffffff11;
+    text-align: right;
+    outline: none;
+    padding: 0.5rem;
+}

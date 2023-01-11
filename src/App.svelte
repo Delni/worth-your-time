@@ -4,6 +4,7 @@
   import Introduction from './lib/Introduction.svelte'
   import Target from './lib/Target.svelte'
   import Result from './lib/Result.svelte'
+    import { onDestroy, onMount } from 'svelte'
 
   let page = 0
   let motion = 1
@@ -26,6 +27,15 @@
       setTimeout(previousPage, 200 * index)
     }
   }
+
+  
+  const listener = ({key}: KeyboardEvent) => key == 'Enter' && nextPage()
+	onMount(() => {
+		document.addEventListener('keyup', listener)
+	})
+	onDestroy(() => {
+		document.removeEventListener('keyup', listener)
+	})
 
 </script>
 
@@ -70,5 +80,9 @@
     width: 100%
     padding: 2rem
     margin: auto
+    :global(h2)
+      margin-bottom: 0
+    :global(small)
+      margin-bottom: 2rem
 
 </style>

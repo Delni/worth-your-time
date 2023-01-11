@@ -4,7 +4,7 @@
 </div>
 
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte'
+	import { createEventDispatcher, } from 'svelte'
 
 	const dispatch = createEventDispatcher();
 	const previous = () => dispatch("previous")

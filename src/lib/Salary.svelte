@@ -1,6 +1,6 @@
 <section>
 	<h2>How much do you earn ?</h2>
-	<small>Money is just the common value of your time.</small>
+	<small>Money is just the common value of your time</small>
 
 	<div class="input-group">
 		<label for="weekly-income">Weekly income</label>
@@ -48,19 +48,10 @@
 <style lang="sass">
 section
 	gap: 1rem
-	h2
-		margin-bottom: 0
-	small
-		margin-bottom: 2rem
+	
 	.input-group
 		display: flex
 		flex-flow: row nowrap
 		justify-content: space-between
-
-	input[type=number]
-		border: 0
-		border-bottom: 1px solid #fff
-		background: #ffffff11
-		text-align: right
-		outline: none
+		align-items: center
 </style>
