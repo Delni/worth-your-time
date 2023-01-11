@@ -1,6 +1,6 @@
 <div class="button-bar">
 	<button on:click={previous}>Back</button>
-	<button on:click={next}>Forward</button>
+	<button on:click={next}>Next</button>
 </div>
 
 <script lang="ts">
