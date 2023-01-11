@@ -31,23 +31,26 @@
 
 <main>
   {#if page == 0 }
-    <div class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
-      <Introduction on:click={nextPage}/>
-    </div>
+    <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
+      <section>
+        <Introduction on:click={nextPage}/>
+      </section>
+    </article>
   {:else if page == 1 }
-    <div class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
+    <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
       <Salary on:next={nextPage} on:previous={previousPage}/>
-    </div>
+    </article>
   {:else if page == 2 }
-    <div class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
-      <Target on:click={nextPage}/>
-    </div>
+    <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
+      <Target on:next={nextPage} on:previous={previousPage}/>
+    </article>
   {:else }
-    <div class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
-      <Result on:click={nextPage}/>
-    </div>
+    <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
+      <section>
+        <Result on:click={nextPage}/>
+      </section>
+    </article>
   {/if}
-  
 </main>
 
 <style lang=sass>
@@ -56,4 +59,16 @@
   top: 0
   left: 0
   width: 100vw
+  height: 100vh
+  display: flex
+  flex-flow: column
+  justify-content: center
+  :global(section)
+    display: flex
+    flex-flow: column nowrap
+    max-width: 500px
+    width: 100%
+    padding: 2rem
+    margin: auto
+
 </style>
