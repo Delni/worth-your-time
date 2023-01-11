@@ -4,15 +4,15 @@
 
 	<div class="input-group">
 		<label for="weekly-income">Weekly income</label>
-		<input type="number" name="weekly-income" id="weekly-income" bind:value={weekly} on:change={inferYM} on:input={inferYM}/>
+		<input type="number" name="weekly-income" id="weekly-income" bind:value={$prompt.weekly} on:change={inferYM} on:input={inferYM} on:submit={next}/>
 	</div>
 	<div class="input-group">
 		<label for="monthly-income">Monthly income</label>
-		<input type="number" name="monthly-income" id="monthly-income" bind:value={monthly} on:change={inferYW} on:input={inferYW}/>
+		<input type="number" name="monthly-income" id="monthly-income" bind:value={monthly} on:change={inferYW} on:input={inferYW} on:submit={next}/>
 	</div>
 	<div class="input-group">
 		<label for="yearly-income">Yearly income</label>
-		<input type="number" name="yearly-income" id="yearly-income" bind:value={yearly} on:change={inferMW} on:input={inferMW}/>
+		<input type="number" name="yearly-income" id="yearly-income" bind:value={yearly} on:change={inferMW} on:input={inferMW} on:submit={next}/>
 	</div>
 	<ButtonBar on:next on:previous/>
 </article>
@@ -20,23 +20,28 @@
 
 <script lang="ts">
 	import ButtonBar from './components/ButtonBar.svelte';
-	let weekly: number = 0
+	import {prompt} from './stores/input.store'
+	import { createEventDispatcher } from 'svelte'
+
+	const dispatch = createEventDispatcher();
+	const next = () => dispatch("next")
+
 	let monthly: number = 0
 	let yearly: number = 0
 
 	const inferYM = () => {
-		monthly = weekly * 4
+		monthly = $prompt.weekly * 4
 		yearly = monthly * 12
 	}
 
 	const inferYW = () => {
-		weekly = monthly / 4
+		$prompt.weekly = monthly / 4
 		yearly = monthly * 12
 	}
 
 	const inferMW = () => {
 		monthly = yearly / 12
-		weekly = monthly / 4
+		$prompt.weekly = monthly / 4
 	}
 </script>
 
@@ -57,4 +62,10 @@ article
 		display: flex
 		flex-flow: row nowrap
 		justify-content: space-between
+
+	input[type=number]
+		border: 0
+		border-bottom: 1px solid #fff
+		background: #ffffff11
+		text-align: right
 </style>
