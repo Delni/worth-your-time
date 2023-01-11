@@ -21,10 +21,7 @@
 <script lang="ts">
 	import ButtonBar from './components/ButtonBar.svelte';
 	import {prompt} from './stores/input.store'
-	import { createEventDispatcher } from 'svelte'
-
-	const dispatch = createEventDispatcher();
-	const next = () => dispatch("next")
+	import { onMount } from 'svelte'
 
 	let monthly: number = 0
 	let yearly: number = 0
@@ -43,6 +40,8 @@
 		monthly = yearly / 12
 		$prompt.weekly = monthly / 4
 	}
+
+	onMount(inferYM)
 </script>
 
 
