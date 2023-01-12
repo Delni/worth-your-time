@@ -10,7 +10,8 @@
 			id="weekly-income" 
 			bind:value={$prompt.weekly} 
 			on:change={inferYM} 
-			on:input={inferYM} autofocus
+			on:input={inferYM} 
+			autofocus
 		/>
 	</div>
 	<div class="input-group">
