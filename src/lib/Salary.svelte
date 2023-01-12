@@ -4,15 +4,36 @@
 
 	<div class="input-group">
 		<label for="weekly-income">Weekly income</label>
-		<input type="number" name="weekly-income" id="weekly-income" bind:value={$prompt.weekly} on:change={inferYM} on:input={inferYM} autofocus/>
+		<input 
+			type="number" 
+			name="weekly-income" 
+			id="weekly-income" 
+			bind:value={$prompt.weekly} 
+			on:change={inferYM} 
+			on:input={inferYM} autofocus
+		/>
 	</div>
 	<div class="input-group">
 		<label for="monthly-income">Monthly income</label>
-		<input type="number" name="monthly-income" id="monthly-income" bind:value={monthly} on:change={inferYW} on:input={inferYW}/>
+		<input 
+			type="number" 
+			name="monthly-income" 
+			id="monthly-income" 
+			bind:value={monthly} 
+			on:change={inferYW} 
+			on:input={inferYW}
+		/>
 	</div>
 	<div class="input-group">
 		<label for="yearly-income">Yearly income</label>
-		<input type="number" name="yearly-income" id="yearly-income" bind:value={yearly} on:change={inferMW} on:input={inferMW}/>
+		<input 
+			type="number" 
+			name="yearly-income" 
+			id="yearly-income" 
+			bind:value={yearly} 
+			on:change={inferMW} 
+			on:input={inferMW}
+		/>
 	</div>
 	<ButtonBar on:next on:previous/>
 </section>
