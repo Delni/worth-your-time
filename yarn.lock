@@ -297,6 +297,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sveltejs/adapter-static@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@sveltejs/adapter-static@npm:1.0.1"
+  peerDependencies:
+    "@sveltejs/kit": ^1.0.0
+  checksum: 5d40859d3b925dd2ff595af971ec0feeca3ec4672f4a0291dc5a5ff572c05a3bce202228376cd348aec65687337b740a2fb3456a0b118807a37272c2fec754b0
+  languageName: node
+  linkType: hard
+
 "@sveltejs/kit@npm:^1.0.0":
   version: 1.0.11
   resolution: "@sveltejs/kit@npm:1.0.11"
@@ -2788,6 +2797,7 @@ __metadata:
   resolution: "test@workspace:."
   dependencies:
     "@sveltejs/adapter-auto": ^1.0.0
+    "@sveltejs/adapter-static": ^1.0.1
     "@sveltejs/kit": ^1.0.0
     "@typescript-eslint/eslint-plugin": ^5.45.0
     "@typescript-eslint/parser": ^5.45.0
