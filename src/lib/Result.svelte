@@ -5,7 +5,7 @@
   	import { circOut } from "svelte/easing";
     import ButtonBar from './components/ButtonBar.svelte'
 
-	const finalValue = $prompt.target / ($prompt.weekly || 1)
+	const finalValue = $prompt.target / ($prompt.weekly || 1) || 0
 	const duration = 3000
 	let percent = tweened(0, {
 		duration,
