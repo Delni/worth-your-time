@@ -4,7 +4,7 @@
 
 	<div class="input-group">
 		<label for="weekly-income">Weekly income</label>
-		<input type="number" name="weekly-income" id="weekly-income" bind:value={$prompt.weekly} on:change={inferYM} on:input={inferYM} />
+		<input type="number" name="weekly-income" id="weekly-income" bind:value={$prompt.weekly} on:change={inferYM} on:input={inferYM} autofocus/>
 	</div>
 	<div class="input-group">
 		<label for="monthly-income">Monthly income</label>
