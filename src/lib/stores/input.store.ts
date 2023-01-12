@@ -4,4 +4,4 @@ type Prompt = {
     weekly: number
     target: number
 }
-export const prompt = writable<Prompt>({ weekly: 0, target: 0 })
+export const prompt = writable<Prompt>({ weekly: undefined, target: undefined })

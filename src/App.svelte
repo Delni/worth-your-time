@@ -29,12 +29,15 @@
   }
 
   
-  const listener = ({key}: KeyboardEvent) => key == 'Enter' && nextPage()
+  const listener = ({key, target}: KeyboardEvent) => {
+    console.log(key, (target as HTMLElement).tagName)
+    key == 'Enter' && (target as HTMLElement).tagName !== "BUTTON" && nextPage()
+  }
 	onMount(() => {
-		document.addEventListener('keyup', listener)
+		document.addEventListener('keydown', listener)
 	})
 	onDestroy(() => {
-		document.removeEventListener('keyup', listener)
+		document.removeEventListener('keydown', listener)
 	})
 
 </script>
@@ -57,7 +60,7 @@
   {:else }
     <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
       <section>
-        <Result on:click={nextPage}/>
+        <Result on:next={nextPage} on:previous={previousPage}/>
       </section>
     </article>
   {/if}
