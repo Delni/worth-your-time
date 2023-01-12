@@ -1,9 +1,9 @@
 <section>
-	<h2>How much do you earn ?</h2>
+	<h2>How much do you earn ? 💰</h2>
 	<small>Money is just the common value of your time</small>
 
 	<div class="input-group">
-		<label for="weekly-income">Weekly income</label>
+		<label for="weekly-income">📆 Weekly income</label>
 		<input 
 			type="number" 
 			name="weekly-income" 
@@ -14,7 +14,7 @@
 		/>
 	</div>
 	<div class="input-group">
-		<label for="monthly-income">Monthly income</label>
+		<label for="monthly-income">🗓 Monthly income</label>
 		<input 
 			type="number" 
 			name="monthly-income" 
@@ -25,7 +25,7 @@
 		/>
 	</div>
 	<div class="input-group">
-		<label for="yearly-income">Yearly income</label>
+		<label for="yearly-income">🗓 Yearly income</label>
 		<input 
 			type="number" 
 			name="yearly-income" 

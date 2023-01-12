@@ -42,3 +42,38 @@
 <ButtonBar on:next on:previous>
 	<span slot="next-label">Restart</span>
 </ButtonBar>
+
+
+<style lang="sass">
+h2::after
+	animation: clock 12s linear infinite
+	content: " 🕐"
+
+@keyframes clock
+	0%
+		content: " 🕛"
+	8.3%
+		content: " 🕐"
+	16.6%
+		content: " 🕑"
+	25%
+		content: " 🕒"
+	33.3%
+		content: " 🕓"
+	41.6%
+		content: " 🕔"
+	50%
+		content: " 🕕"
+	58.3%
+		content: " 🕖"
+	66.6%
+		content: " 🕗"
+	75%
+		content: " 🕘"
+	83.3%
+		content: " 🕙"
+	91.6%
+		content: " 🕚"
+	100%
+		content: " 🕛"
+</style>

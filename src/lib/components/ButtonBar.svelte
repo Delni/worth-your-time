@@ -1,6 +1,6 @@
 <div class="button-bar">
-	<button on:click={previous} type="reset">Back</button>
-	<button on:click={next} type="submit"><slot name="next-label">Next</slot></button>
+	<button on:click={previous} type="reset">🚶 Back</button>
+	<button on:click={next} type="submit"><slot name="next-label">Next 👉</slot></button>
 </div>
 
 <script lang="ts">
