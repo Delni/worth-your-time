@@ -29,10 +29,10 @@
   }
 
   
-  const listener = ({key, target}: KeyboardEvent) => {
-    console.log(key, (target as HTMLElement).tagName)
-    key == 'Enter' && (target as HTMLElement).tagName !== "BUTTON" && nextPage()
-  }
+  const listener = ({key, target}: KeyboardEvent) => key == 'Enter' 
+    && (target as HTMLElement).tagName !== "BUTTON" 
+    && nextPage()
+
 	onMount(() => {
 		document.addEventListener('keydown', listener)
 	})
