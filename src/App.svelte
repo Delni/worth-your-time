@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fly } from 'svelte/transition';
+  import { fade, fly } from 'svelte/transition';
   import Salary from './lib/pages/Salary.svelte'
   import Introduction from './lib/pages/Introduction.svelte'
   import Target from './lib/pages/Target.svelte'
@@ -7,8 +7,11 @@
     import { onDestroy, onMount } from 'svelte'
 
   let page = 0
+  let loaded = false
+  let touched = false
   let motion = 1
   const nextPage = () => {
+    touched = true
     motion = 1
     if(page + 1 >= 4) {
       stepBackwards(3)
@@ -34,6 +37,7 @@
     && nextPage()
 
 	onMount(() => {
+    loaded = true
 		document.addEventListener('keydown', listener)
 	})
 	onDestroy(() => {
@@ -42,11 +46,12 @@
 
 </script>
 
+{#if loaded }
 <main>
   {#if page == 0 }
     <article class="page" in:fly={{x: 250 * motion }} out:fly={{x: -250 * motion }}>
       <section>
-        <Introduction on:click={nextPage}/>
+        <Introduction on:click={nextPage} withTransition={!touched}/>
       </section>
     </article>
   {:else if page == 1 }
@@ -65,6 +70,7 @@
     </article>
   {/if}
 </main>
+{/if}
 
 <style lang=sass>
 .page

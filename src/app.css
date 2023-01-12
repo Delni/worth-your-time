@@ -4,7 +4,7 @@
     line-height: 24px;
     font-weight: 400;
 
-    color-scheme: light dark;
+    color-scheme: dark;
     --accent: hsl(42, 84%, 50%);
     --accent-light: hsl(44, 84%, 55%);
     --accent-dark: hsl(39, 84%, 47%);
@@ -70,7 +70,7 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
         background-color: #ffffff;
@@ -81,7 +81,7 @@ button:focus-visible {
     button {
         background-color: #f9f9f9;
     }
-}
+} */
 
 input[type=number] {
     border: 0;
