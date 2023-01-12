@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { prompt } from './stores/input.store'
+    import { prompt } from '../stores/input.store'
 	import { tweened } from "svelte/motion";
 	import { fade } from "svelte/transition";
   	import { circOut } from "svelte/easing";
-    import ButtonBar from './components/ButtonBar.svelte'
+    import ButtonBar from '../components/ButtonBar.svelte'
 
 	const finalValue = $prompt.target / ($prompt.weekly || 1) || 0
 	const duration = 3000

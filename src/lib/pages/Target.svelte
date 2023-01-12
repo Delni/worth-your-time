@@ -1,6 +1,6 @@
 <script>
-    import ButtonBar from './components/ButtonBar.svelte'
-	import { prompt } from './stores/input.store'
+    import ButtonBar from '../components/ButtonBar.svelte'
+	import { prompt } from '../stores/input.store'
 </script>
 
 <section>

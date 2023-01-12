@@ -40,8 +40,8 @@
 
 
 <script lang="ts">
-	import ButtonBar from './components/ButtonBar.svelte';
-	import {prompt} from './stores/input.store'
+	import ButtonBar from '../components/ButtonBar.svelte';
+	import {prompt} from '../stores/input.store'
 	import { onMount } from 'svelte'
 
 	let monthly: number = 0

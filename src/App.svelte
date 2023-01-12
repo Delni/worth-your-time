@@ -1,9 +1,9 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
-  import Salary from './lib/Salary.svelte'
-  import Introduction from './lib/Introduction.svelte'
-  import Target from './lib/Target.svelte'
-  import Result from './lib/Result.svelte'
+  import Salary from './lib/pages/Salary.svelte'
+  import Introduction from './lib/pages/Introduction.svelte'
+  import Target from './lib/pages/Target.svelte'
+  import Result from './lib/pages/Result.svelte'
     import { onDestroy, onMount } from 'svelte'
 
   let page = 0
