@@ -86,7 +86,7 @@
     display: flex
     flex-flow: column nowrap
     max-width: 500px
-    width: 100%
+    width: calc(100% - 4rem)
     padding: 2rem
     margin: auto
     :global(h2)
